@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose =require('mongoose');
 const User=require('./routes/user');
-const Posts=require('')
+const Posts=require('./routes/posts')
 
 const app=express();
 const port=4000;
@@ -17,6 +17,7 @@ con.on("open",()=>{
 
 app.use(express.json());
 app.use('/user',User)
+app.use('/post',Posts)
 
 
 app.listen(port,()=>{
