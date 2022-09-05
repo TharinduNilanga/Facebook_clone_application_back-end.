@@ -33,6 +33,22 @@ router.get('/:id',async(req,res)=>{
         res.send(e)
     }
 });
+router.get('/fetch/:userId',async(req,res)=>{
+    try {
+        const response = await Posts.find();
+        let resp=null;
+        for(const posts of response){
+            if (posts.userId===req.params.userId){
+                resp=posts;
+
+            }
+
+        }
+        res.send(resp)
+    }catch (e) {
+        res.send(e)
+    }
+});
 router.put('/:id',async(req,res)=>{
     try {
         const post=await Posts.findById(req.params.id);

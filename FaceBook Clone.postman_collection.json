@@ -245,6 +245,67 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "get posts by userid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/post/fetch/6305c9a7f23f971fc20af080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"post",
+								"fetch",
+								"6305c9a7f23f971fc20af080"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"geeth52gmail.com\",\r\n    \"password\":\"A1231231\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/userLogin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"userLogin"
+							],
+							"query": [
+								{
+									"key": "emai",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}

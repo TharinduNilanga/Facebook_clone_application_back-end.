@@ -64,5 +64,5 @@ router.delete('/:id',async(req,res)=>{
     }catch (err) {
         res.send("error : "+err);
     }
-})
+});
 module.exports=router
